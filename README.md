@@ -144,8 +144,8 @@ Launch OpenBCI GUI and verify:
 
 ---
 
-## Step 5 — Run the VR Application
-- Run the newly installed Unity app in the Meta Quest headset to experience the neuroadaptive VR sophrologist
+# Run the VR Application
+Now, run the newly installed Unity app in the Meta Quest headset to experience the neuroadaptive VR sophrologist
 
 ---
 
