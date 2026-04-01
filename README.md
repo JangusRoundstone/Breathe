@@ -1,33 +1,28 @@
-# Breathe — Multimodal EEG-VR Focused Attention Meditation Sophrologist
+# Breathe — Multimodal EEG-VR Powered Focused Attention Meditation Sophrologist
 
-**Breathe** is an **EEG + VR powered focused-attention meditation system** that dynamically and multimodally adapts its immersive environments based on **real-time brain activity** of the user.
+Breathe is an EEG + VR powered focused-attention meditation system that dynamically and multimodally adapts its immersive environments based on real-time brain activity of the user.
 
-The system acts as a **virtual sophrologist**, guiding users through calming environments while monitoring EEG signals to adjust environmental feedback in real time.
+The system acts as a virtual sophrologist, guiding users through calming environments while monitoring EEG signals to adjust environmental feedback in real time.
 
-This project explores **Brain-Computer Interface (BCI)** interaction in immersive virtual environments using **Meta Quest** and **Nuance EEG hardware from EigenSensor**.
+This project explores neuroadaptive interface interaction in immersive virtual environments using Meta Quest 2 and EEG-based brain computer interface (BCI) from EigenSensor.
 
-This work was conducted as part of the **Dean's Office Undergraduate Student Research Project**, under:
+This work was conducted as part of the **Dean's Office Undergraduate Student Research Project** at NUS, under:
 
-- **Professor:** Pei Lixuan  
-- **PhD Advisor:** Go Tech Lin  
+- **Professor:** Li-Shiuan Peh
+- **PhD Advisor:** Goh Teck Lun
+
+The system is designed as **part of a larger research effort at the LSP research group at NUS to develop wearable, on-the-move EEG sensor**:
 
 ---
 
 # Overview
 
-Breathe includes two adaptive VR environments:
+Breathe includes two neuroadaptive VR environments:
 
 - Fireplace Relaxation Environment  
 - Beach Relaxation Environment  
 
-Each environment dynamically adapts its visual and audio based on **user relaxation and focus levels derived from EEG signals**.
-
-The system is designed for:
-
-- Focused attention meditation  
-- Stress reduction  
-- Neuroadaptive immersive environments  
-- Passive brain-computer interface interaction  
+Each environment dynamically adapts its unique visual and audio cues based on user relaxation and focus levels derived from their EEG signals.
 
 ---
 
@@ -37,10 +32,10 @@ The system is designed for:
 
 Required Hardware:
 
-- Meta Quest 2 or Meta Quest 3
-- Nuance EEG Headset (EigenSensor)
-- Nuance EEG USB Dongle (EigenSensor)
-- Alcohol wipes (for electrode placement)
+- Meta Quest 2 or Meta Quest 3 Headset
+- Nuance EEG Headset (provided by EigenSensor)
+- Nuance EEG USB Dongle (provided by EigenSensor)
+- Alcohol wipes (for cleaning the part of the user's skin for refernce EEG electrode placement)
 - Cap / hat (to secure EEG sensors)
 
 ---
@@ -49,7 +44,7 @@ Required Hardware:
 
 Required Software:
 
-- Unity Editor **2022.3.39f1** (minimum)
+- Unity Editor 2022.3.39f1 (minimum)
 - OpenBCI GUI
 - Meta Horizon app on smartphone
 - Android Build Support (Unity)
@@ -104,11 +99,9 @@ Ensure the following scenes are added in the same order under scenes in build:
 
 ## Step 5 — Build to Meta Quest
 
-1. Connect Meta Quest headset  
+1. Connect Meta Quest headset to the development laptop
 2. Enable Developer Mode  
-3. Click **Build and Run**  
-
-Application will be installed directly onto headset.
+3. Build the Unity project to the VR headset. Dont run it yet
 
 ---
 
@@ -144,21 +137,15 @@ Launch OpenBCI GUI and verify:
 
 ---
 
-# Running the Experience
+## Step 4 — Set up the MQTT Broker on Laptop
 
-Once setup is complete:
-
-1. Launch application on Quest headset  
-2. Start EEG streaming  
-3. Enter VR environment  
-
-The system will:
-
-- Monitor brain activity  
-- Detect relaxation and focus levels  
-- Adapt environment dynamically  
+- Install a MQTT broker on your development laptop running OpenBCI GUI
+- Start a MQTT session subscribed to the output of OpenBCI GUI, and publish user's real time alpha value to the VR headset
 
 ---
+
+## Step 5 — Run the VR Application
+- Run the newly installed Unity app in the Meta Quest headset to experience the neuroadaptive VR sophrologist
 
 ---
 
@@ -175,13 +162,12 @@ The system will:
 
 # Research Motivation
 
-This project explores:
+This project enables me to explore:
 
 - Brain-computer interaction in VR  
 - Focused attention meditation in immersive environments  
-- Neuroadaptive VR systems  
-- Passive input interfaces  
-- AI-driven relaxation environments  
+- Neuroadaptive VR systems
+- Wearable, on-the-go EEG-BCI
 
 ---
 
@@ -202,9 +188,8 @@ Go Tech Lin
 # Future Work
 
 - More adaptive meditation environments  
-- Improved EEG signal processing  
 - Personalized meditation guidance  
-- Multimodal biofeedback integration  
+- Multimodal biofeedback integration, such as haptics 
 
 ---
 
@@ -218,8 +203,4 @@ MIT License
 
 GitHub:  
 https://github.com/JangusRoundstone
-
----
-
-# Unity Version
 
